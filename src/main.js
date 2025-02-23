@@ -12,4 +12,17 @@ function getComputerChoice(){
   }
 }
 
-console.log(getComputerChoice());
+function getHumanChoice(){
+  let humanChoice;
+  
+  return (
+    humanChoice = prompt(
+      "Enter rock, paper, or scissors: "
+    )
+  );
+}
+
+let humanScore = 0;
+let computerScore = 0;
+
+console.log(getHumanChoice());
