@@ -19,12 +19,7 @@ function getComputerChoice(){
 function getHumanChoice(){
   let humanChoice;
   
-  //Return answer to prompt turned to lower-case so it is not case sensitive
-  return (
-    humanChoice = prompt(
-      "Enter rock, paper, or scissors: "
-    ).toLowerCase()
-  );
+  
 }
 
 function playGame(){
@@ -32,13 +27,10 @@ function playGame(){
   let humanScore = 0;
   let computerScore = 0;
 
-  for(let i = 0; i < 5; ++i){
-
-    let humanSelection = getHumanChoice();
-    let computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-    console.log(`Human: ${humanScore} | Computer: ${computerScore}`)
-  }
+  //let humanSelection = getHumanChoice();
+  //let computerSelection = getComputerChoice();
+  //playRound(humanSelection, computerSelection);
+  console.log(`Human: ${humanScore} | Computer: ${computerScore}`)
 
   function playRound(humanChoice, computerChoice){
     //If both players pick the same thing, it's a draw
@@ -61,5 +53,3 @@ function playGame(){
     }
   }
 }
-
-playGame();
