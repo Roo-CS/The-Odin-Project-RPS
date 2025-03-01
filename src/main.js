@@ -32,14 +32,26 @@ function evalRound(humanChoice, computerChoice){
       (humanChoice == 'paper' && computerChoice == 'rock') ||
       (humanChoice == 'scissors' && computerChoice == 'paper')
     ){
-      console.log("You win!");
+      setPlayerScore(getPlayerScore());
     //If you didn't win or tie, you lost
     }else{
-      console.log("You lose");
+      setComputerScore(getComputerScore());
     }
   }
 }
 
-function getScore(){
-  //let humanScore = document.querySelector()
+function getPlayerScore(){
+  return score = document.querySelector("#playerScore");
+}
+
+function setPlayerScore(playerScore){
+  playerScore.textContent++;
+}
+
+function getComputerScore(){
+  return score = document.querySelector("#computerScore");
+}
+
+function setComputerScore(computerScore){
+  computerScore.textContent++;
 }

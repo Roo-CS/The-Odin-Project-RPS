@@ -7,7 +7,7 @@ body {
 #button-container{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
   gap: 20px;
 }
 
@@ -31,5 +31,21 @@ img{
   justify-content: center;
   height: 100vh;
   text-align: center;
+  gap: 50px;
+}
+
+#score-container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+#score-container h1{
+  text-decoration: underline;
+}
+
+#score-board{
+  display: flex;
+  justify-content: center;
   gap: 50px;
 }
