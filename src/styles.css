@@ -4,11 +4,10 @@ body {
   background-color: #faf5ef;
 }
 
-#container{
+#button-container{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   gap: 20px;
 }
 
@@ -24,4 +23,13 @@ button{
 img{
   height: 50px;
   width: 50px;
+}
+
+#page-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  gap: 50px;
 }

@@ -16,40 +16,30 @@ function getComputerChoice(){
   }
 }
 
-function getHumanChoice(){
-  let humanChoice;
-  
-  
+function playRound(playerInput){
+  let humanChoice = playerInput;
+  evalRound(humanChoice, getComputerChoice());
 }
 
-function playGame(){
-
-  let humanScore = 0;
-  let computerScore = 0;
-
-  //let humanSelection = getHumanChoice();
-  //let computerSelection = getComputerChoice();
-  //playRound(humanSelection, computerSelection);
-  console.log(`Human: ${humanScore} | Computer: ${computerScore}`)
-
-  function playRound(humanChoice, computerChoice){
-    //If both players pick the same thing, it's a draw
-    if(humanChoice == computerChoice){
-      console.log(`It's a draw! Both players picked ${humanChoice}!`);
+function evalRound(humanChoice, computerChoice){
+  //If both players pick the same thing, it's a draw
+  if(humanChoice == computerChoice){
+    console.log(`It's a draw! Both players picked ${humanChoice}!`);
+  }else{
+  //If any of the winning combinations occur, you win
+    if(
+      (humanChoice == 'rock' && computerChoice == 'scissors') ||
+      (humanChoice == 'paper' && computerChoice == 'rock') ||
+      (humanChoice == 'scissors' && computerChoice == 'paper')
+    ){
+      console.log("You win!");
+    //If you didn't win or tie, you lost
     }else{
-    //If any of the winning combinations occur, you win
-      if(
-        (humanChoice == 'rock' && computerChoice == 'scissors') ||
-        (humanChoice == 'paper' && computerChoice == 'rock') ||
-        (humanChoice == 'scissors' && computerChoice == 'paper')
-      ){
-        console.log(`You win! ${humanChoice} beats ${computerChoice}!`);
-        ++humanScore;
-      //If you didn't win or, you lost
-      }else{
-        console.log(`You lost. ${humanChoice} is beaten by ${computerChoice}.`);
-        ++computerScore;
-      }
+      console.log("You lose");
     }
   }
+}
+
+function getScore(){
+  //let humanScore = document.querySelector()
 }

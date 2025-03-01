@@ -9,18 +9,32 @@
   </head>
 
   <body>
-    <div id="container">
-      <button type="button">Rock
-      <img src="src/rock.png" alt="A rock">
-      </button>
+    
+    <div id="page-container">
 
-      <button type="button">Paper
-      <img src="src/paper.png" alt="A rock">
-      </button>
+      <div id="header-container">
+        <h1>Rock Paper Scissors</h1>
+      </div>
       
-      <button type="button">Scissors
-      <img src="src/scissors.png" alt="A rock">
-      </button>
-    </div>
+      <div id="button-container">
+        <button onclick="playRound('rock')" type="button">Rock
+        <img src="src/rock.png" alt="A rock">
+        </button>
+
+        <button onclick="playRound('paper')" type="button">Paper
+        <img src="src/paper.png" alt="A piece of paper">
+        </button>
+        
+        <button onclick="playRound('scissors')" type="button">Scissors
+        <img src="src/scissors.png" alt="A pair of scissors">
+        </button>
+      </div>
+
+      <div id="score-container">
+        <h1>Score:</h1>
+      </div>
+
+   </div>
+
   </body>
 </html>
