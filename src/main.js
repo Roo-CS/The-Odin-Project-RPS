@@ -38,6 +38,8 @@ function evalRound(humanChoice, computerChoice){
       setComputerScore(getComputerScore());
     }
   }
+
+  matchResult();
 }
 
 function getPlayerScore(){
@@ -54,4 +56,16 @@ function getComputerScore(){
 
 function setComputerScore(computerScore){
   computerScore.textContent++;
+}
+
+function matchResult(){
+  if(getPlayerScore().textContent == 5){
+    let winner = document.querySelector("#winner");
+    winner.textContent = "Human wins!";
+  }else{
+    if(getComputerScore().textContent == 5){
+      let winner = document.querySelector("#winner");
+      winner.textContent = "Computer wins!";
+    }
+  }
 }
